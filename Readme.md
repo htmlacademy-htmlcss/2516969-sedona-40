@@ -2,7 +2,7 @@
 
 * Студент: [Alina Kubrak](https://up.htmlacademy.ru/htmlcss/40/user/2516969).
 * Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
-
+* Сайт: [Проект Седона](https://alya-homyak.github.io/2516969-sedona-40/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
