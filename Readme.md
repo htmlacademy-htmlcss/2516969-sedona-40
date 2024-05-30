@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Alina Kubrak](https://up.htmlacademy.ru/htmlcss/40/user/2516969).
-* Наставник: [Андрей Грачев] (https://htmlacademy.ru/profile/angra).
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
