@@ -507,6 +507,10 @@ input[type="text"] {
   font-family: inherit;
 }
 
+.hotels {
+  padding: 50px 70px 0;
+}
+
 .hotels-title,
 .hotels-number {
   font-size: 30px;
@@ -522,15 +526,9 @@ input[type="text"] {
   color: #333333;
 }
 
-.hotel-cards {
-  margin-left: 70px;
-  margin-right: 70px;
-}
-
 .hotel-cards-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
 }
 
@@ -540,6 +538,8 @@ input[type="text"] {
   padding: 20px;
   border: solid 1px #e6e6e6;
   border-radius: 4px;
+  width: 340px;
+  box-sizing: border-box;
 }
 
 .hotel-card-link {
@@ -609,7 +609,6 @@ input[type="text"] {
 
 .pagination {
   display: flex;
-
 }
 
 .pagination-item {
@@ -648,4 +647,8 @@ input[type="text"] {
   font-weight: 400;
   text-align: center;
   color: #333333;
+}
+
+.catalog-field {
+  background-color: #f2f2f2;
 }
