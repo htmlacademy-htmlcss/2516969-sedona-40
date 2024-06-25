@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -28,6 +32,13 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main-page {
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -65,6 +76,7 @@ ul {
   font-size: 20px;
   padding: 0;
   height: 64px;
+  z-index: 1;
 }
 
 .main-navigation {
