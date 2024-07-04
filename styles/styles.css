@@ -35,6 +35,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  box-shadow: 0 0 15px #00000033;
+
 }
 
 .main-page {
@@ -717,9 +719,9 @@ label span {
 }
 
 .hotel-cards-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .hotel-card-item {
