@@ -93,11 +93,11 @@ ul {
 
 .logo-link {
   margin-right: 30px;
-  margin-bottom: -6.05px;
+  margin-bottom: -10.05px;
 }
 
 .logo-link:hover,
-.logo-link:focus {
+.logo-link:focus-visible {
   opacity: 50%;
 }
 
@@ -115,7 +115,7 @@ ul {
 }
 
 .navigation-link:hover,
-.navigation-link:focus {
+.navigation-link:focus-visible {
   color: #756157;
 }
 
@@ -150,7 +150,7 @@ ul {
 }
 
 .navigation-button-link-search:hover,
-.navigation-button-link-search:focus {
+.navigation-button-link-search:focus-visible {
   background-color: #756157;
 }
 
@@ -162,13 +162,16 @@ ul {
   mask-size: 18px 17px;
   mask-repeat: no-repeat;
   mask-position: center;
-  position: relative;
   background-color: #000000;
 }
 
 .button-link-favourite:hover,
-.button-link-favourite:focus {
+.button-link-favourite:focus-visible {
   background-color: #756157;
+}
+
+.navigation-button-link-favourite {
+  position: relative;
 }
 
 .navigation-button-link-favourite-number {
@@ -184,7 +187,7 @@ ul {
   justify-content: center;
   position: absolute;
   top: 11px;
-  right: 605px;
+  right: 3px;
 }
 
 .navigation-button-reservation {
@@ -201,7 +204,7 @@ ul {
 }
 
 .navigation-button-reservation:hover,
-.navigation-button-reservation:focus {
+.navigation-button-reservation:focus-visible {
   background-color: #615048;
 }
 
@@ -231,11 +234,15 @@ ul {
   margin: 0 auto;
 }
 
+.main-title {
+  margin-bottom: 25px;
+}
+
 .section-text {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .advantages-list {
@@ -251,7 +258,8 @@ ul {
   text-align: center;
   text-transform: uppercase;
   width: 171px;
-  margin: 0 auto 62px;
+  margin: 0 auto 42px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -262,19 +270,12 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.3);
-  top: 85px;
   position: absolute;
+  bottom: -12px;
 }
 
 .advantages-item-dark .advantages-item-title::after {
-  content: "";
-  width: 60px;
-  height: 2px;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.3);
-  top: 85px;
-  position: absolute;
 }
 
 .advantages-item-text {
@@ -298,6 +299,7 @@ ul {
   padding: 112.5px 85px;
   box-sizing: border-box;
 }
+
 .advantages-item-light {
   background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
@@ -324,12 +326,12 @@ ul {
 
 .propose-list {
   display: flex;
-  margin-top: 60px;
+  margin-top: 64px;
 }
 
 .propose-item,
 .propose-item-dark {
-  padding: 81px 85px;
+  padding: 78px 85px;
   width: 400px;
   align-content: center;
 }
@@ -410,7 +412,7 @@ ul {
 }
 
 .button-search-appartent:hover,
-.button-search-appartent:focus {
+.button-search-appartent:focus-visible {
   background-color: #615048;
 }
 
@@ -451,10 +453,12 @@ input {
   line-height: 24px;
   font-size: 18px;
   width: 452px;
-  padding: 14px 20px;
   border-radius: 4px 0 0 4px;
   border: none;
   box-sizing: border-box;
+  padding-left: 20px;
+  font-family: inherit;
+
 }
 
 .subscribe-button {
@@ -474,14 +478,13 @@ input {
 }
 
 .subscribe-button:hover,
-.subscribe-button:focus {
+.subscribe-button:focus-visible {
   background-color: #68a2ca;
 }
 
 .contacts {
   display: flex;
   padding: 40px 70px 30px;
-  height: 50px;
   justify-content: space-between;
 }
 
@@ -491,6 +494,7 @@ input {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-top: -5px;
 }
 
 .social-link {
@@ -525,7 +529,8 @@ input {
   text-align: center;
   color: #000000;
   text-decoration: none;
-  padding: 5px;
+  padding-top: 5px;
+  margin-left: -5px;
 }
 
 .footer-logo-link {
@@ -590,9 +595,18 @@ input {
 }
 
 .catalog-filter-group {
-  border: none;
+  min-width: 150px;
   margin: 0;
   padding: 0;
+  margin-right: 70px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .infrastructure {
@@ -625,9 +639,66 @@ input {
   margin-bottom: 0;
 }
 
+.filter-item {
+  top: 0;
+  left: 36px;
+  position: relative;
+}
+
+.catalog-filter-item .control {
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.control-input {
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 16px;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.control-input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icons/tick-chekbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+    right: 20px;
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icons/tick-radio.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+}
+
 .price-catalog {
   display: flex;
-  margin-left: auto;
+  margin-left: 71px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .price-catalog-section {
@@ -671,11 +742,53 @@ label span {
   left: 106px
 }
 
+.filter-range-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.price-range-scale {
+  position: relative;
+  height: 4px;
+  width: 288px;
+  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-range-bar {
+  position: absolute;
+  height: 4px;
+  width: 226px;
+  background-color: #ffffff;
+}
+
+.price-range-toggle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -10px;
+}
+
+.toggle-max {
+  top: -10px;
+  left: 207px;
+}
+
 .price-catalog-buttons {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding-top: 56px;
 }
+
 .price-catalog-buttons button {
   font-size: 16px;
   line-height: 20px;
@@ -695,8 +808,16 @@ label span {
   cursor: pointer;
 }
 
+.catalog-filter-reset:hover {
+  opacity: 0.6;
+}
+
+.catalog-filter-reset:focus-visible {
+  outline: solid 3px #83b3d3;
+}
+
 .catalog-filter-submit {
-  background-color: #81B3D3;
+  background-color: #81b3d3;
   cursor: pointer;
 }
 
@@ -723,8 +844,7 @@ label span {
   min-width: 400px;
 }
 
-.hotels-number{
-  /* отступ должен быть у родителя */
+.hotels-number {
   margin-right: 200px;
 }
 
@@ -736,10 +856,11 @@ label span {
   border-radius: 4px;
   width: 292px;
   height: 49px;
+  padding-left: 14px;
+  font-family: inherit;
 }
 
 .select-view-list {
-  /* TODO отступ должен быть у родителя */
   display: flex;
   flex-direction: row;
   width: 160px;
@@ -833,7 +954,7 @@ label span {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  margin: 0;
+  margin: -1px;
 }
 
 .hotel-card-button {
@@ -880,31 +1001,31 @@ label span {
 }
 
 .stars-1 {
-  background-image:url(../images/stars.svg);
+  background-image: url(../images/stars.svg);
   background-repeat: no-repeat;
   width: 24px;
 }
 
 .stars-2 {
-  background-image:url(../images/stars.svg);
+  background-image: url(../images/stars.svg);
   background-repeat: no-repeat;
   width: 48px;
 }
 
 .stars-3 {
-  background-image:url(../images/stars.svg);
+  background-image: url(../images/stars.svg);
   background-repeat: no-repeat;
   width: 72px;
 }
 
 .stars-4 {
-  background-image:url(../images/stars.svg);
+  background-image: url(../images/stars.svg);
   background-repeat: no-repeat;
   width: 96px;
 }
 
 .stars-5 {
-  background-image:url(../images/stars.svg);
+  background-image: url(../images/stars.svg);
   background-repeat: no-repeat;
 }
 
@@ -920,6 +1041,7 @@ label span {
   height: 100%;
   text-align: center;
   align-content: center;
+  margin: -2px;
 }
 
 .pagination {
@@ -939,12 +1061,14 @@ label span {
   background-color: #82b3d3;
   text-decoration: none;
   display: flex;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-sizing: border-box;
+  padding: 3px;
 }
 
 .pagination-current {
@@ -978,7 +1102,7 @@ label span {
   font-weight: 400;
   text-align: center;
   color: #333333;
-  margin-bottom: 54px;
+  margin-bottom: 52px;
 }
 
 .catalog-field {
