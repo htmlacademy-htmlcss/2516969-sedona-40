@@ -60,13 +60,6 @@ body {
 .no-list {
   list-style: none;
   padding-left: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
   margin: 0;
   padding: 0;
 }
@@ -94,6 +87,7 @@ ul {
 .logo-link {
   margin-right: 30px;
   margin-bottom: -10.05px;
+  text-decoration: none;
 }
 
 .logo-link:hover,
@@ -112,11 +106,13 @@ ul {
   color: inherit;
   padding: 20px 16px;
   position: relative;
+  text-decoration: none;
 }
 
 .navigation-link:hover,
 .navigation-link:focus-visible {
   color: #756157;
+  text-decoration: none;
 }
 
 .active-page:before {
@@ -127,6 +123,7 @@ ul {
   bottom: -2px;
   height: 2px;
   background-color: #756257;
+  text-decoration: none;
 }
 
 .navigation-button-list {
@@ -147,11 +144,13 @@ ul {
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: #000000;
+  text-decoration: none;
 }
 
 .navigation-button-link-search:hover,
 .navigation-button-link-search:focus-visible {
   background-color: #756157;
+  text-decoration: none;
 }
 
 .button-link-favourite {
@@ -163,15 +162,18 @@ ul {
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: #000000;
+  text-decoration: none;
 }
 
 .button-link-favourite:hover,
 .button-link-favourite:focus-visible {
   background-color: #756157;
+  text-decoration: none;
 }
 
 .navigation-button-link-favourite {
   position: relative;
+  text-decoration: none;
 }
 
 .navigation-button-link-favourite-number {
@@ -188,6 +190,7 @@ ul {
   position: absolute;
   top: 11px;
   right: 3px;
+  text-decoration: none;
 }
 
 .navigation-button-reservation {
@@ -201,11 +204,13 @@ ul {
   border-radius: 4px;
   padding: 8px 0;
   margin-left: 20px;
+  text-decoration: none;
 }
 
 .navigation-button-reservation:hover,
 .navigation-button-reservation:focus-visible {
   background-color: #615048;
+  text-decoration: none;
 }
 
 .hero {
@@ -409,11 +414,13 @@ ul {
   border-radius: 4px;
   padding: 8px 0;
   margin: 54px auto 0;
+  text-decoration: none;
 }
 
 .button-search-appartent:hover,
 .button-search-appartent:focus-visible {
   background-color: #615048;
+  text-decoration: none;
 }
 
 .subscribe {
@@ -449,7 +456,7 @@ ul {
   justify-content: center;
 }
 
-input {
+.field {
   line-height: 24px;
   font-size: 18px;
   width: 452px;
@@ -502,6 +509,7 @@ input {
   width: 47.3px;
   height: 40px;
   content-visibility: hidden;
+  text-decoration: none;
 }
 
 .VK {
@@ -535,6 +543,7 @@ input {
 
 .footer-logo-link {
   padding: 8.5px 0 8.5px 41.5px;
+  text-decoration: none;
 }
 
 
@@ -566,6 +575,10 @@ input {
   height: 21px;
   width: 150px;
   column-gap: 10px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
 }
 
 .home {
@@ -879,6 +892,7 @@ label span {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   display: block;
+  text-decoration: none;
 }
 
 
