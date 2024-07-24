@@ -65,7 +65,7 @@
             </li>
           </ul>
 
-          <form action="https://echo.htmlacademy.ru/" method="get">
+          <form data-test="filter" action="https://echo.htmlacademy.ru/" method="get">
             <div data-test="filter" class="filters">
               <fieldset data-test="filter" class="catalog-filter-group infrastructure">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -147,15 +147,27 @@
           <div class="hotels-header">
             <h2 class="hotels-title">Найдено гостиниц:<span class="hotels-number"> 38</span></h2>
             <select class="select-control" aria-label="Сортировка">
-              <option value="popular">Сначала популярные</option>
-              <option value="cheap">Сначала дешёвые</option>
+              <option value="popular">Сначала дешёвые</option>
+              <option value="cheap">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
             <div class="select-view">
               <ul class="no-list select-view-list">
-                <li class="select-view-item tile active"></li>
-                <li class="select-view-item slideshow"></li>
-                <li class="select-view-item list"></li>
+                <li>
+                  <a class="select-view-item tile active" href="catalog.html?view=tile" title="Вид: плитка">
+                    <span class="visually-hidden">Вид: плитка</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="select-view-item slideshow" href="catalog.html?view=tile" title="Вид: слайдшоу">
+                    <span class="visually-hidden">Вид: слайдшоу</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="select-view-item list" href="catalog.html?view=tile" title="Вид: список">
+                    <span class="visually-hidden">Вид: список</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -301,7 +313,7 @@
           </ul>
           <a href="tel:+78128121212" class="phone-link">+7 (812) 812-12-12</a>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo-link">
-            <img class="footer-logo-img" src="images/HTML Academy-logo.svg" alt="logo HTML Academy">
+            <img class="footer-logo-img" src="images/HTMLAcademy-logo.svg" alt="logo HTML Academy">
           </a>
         </div>
       </footer>
