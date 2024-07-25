@@ -214,19 +214,28 @@ body {
 }
 
 .hero {
-  background-image: url("../images/hero-image.jpg");
-  background-color: #82b3d3;
-  background-size: auto 100%;
+  background-color: #283a3e;
+  background-image: url(../images/divider.svg), url(../images/hero-image.jpg);
   background-repeat: no-repeat;
-  background-position: center bottom;
-  margin-bottom: 69px;
-  padding-top: 51px;
+  background-size: auto, cover;
+  background-position: bottom;
+  padding-top: 50px;
   padding-bottom: 82px;
+  height: 484px;
+  box-sizing: border-box;
 }
 
 .image-hero {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
   display: block;
-  margin: auto;
+  margin: 0 auto;
+  width: 458px;
+}
+
+.about-sedona {
+  padding-top: 70px;
 }
 
 .section-title {
@@ -513,19 +522,19 @@ body {
 }
 
 .VK {
-  background-image: url("../images/icons/VK-icon.svg");
+  background-image: url("../images/icons/vk-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .Telegram {
-  background-image: url("../images/icons/Telegram-icon.svg");
+  background-image: url("../images/icons/telegram-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .YouTube {
-  background-image: url("../images/icons/You-Tube-icon.svg");
+  background-image: url("../images/icons/you-tube-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -687,7 +696,7 @@ body {
   background-position: center;
   background-size: contain;
   position: relative;
-    right: 20px;
+    right: 0;
 }
 
 .control-input[type="radio"] {
