@@ -125,7 +125,7 @@
             Укажите предполагаемые даты поездки, и мы покажем вам лучшие
             предложения гостиниц в Седоне
           </p>
-          <a href="catalog.html" class="button-search-appartent">Поиск гостиницы в Седоне</a>
+          <a href="modal.html" class="button-search-appartent">Поиск гостиницы в Седоне</a>
         </section>
 
         <section data-test="subscribe" class="subscribe">
@@ -135,7 +135,8 @@
           </p>
           <div class="form-section">
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="subscribe-email" required>
+              <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="subscribe-email"
+                required>
               <button class="subscribe-button" type="submit">
                 <span class="subscribe-button-title">Подписаться</span>
               </button>
@@ -159,10 +160,71 @@
           </ul>
           <a href="tel:+78128121212" class="phone-link">+7 (812) 812-12-12</a>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo-link">
-            <img class="footer-logo-img" src="images/html-academy-logo.svg" width="115" height="33" alt="logo HTML Academy">
+            <img class="footer-logo-img" src="images/html-academy-logo.svg" width="115" height="33"
+              alt="logo HTML Academy">
           </a>
         </div>
       </footer>
+    </div>
+
+    <div class="modal-section visually-hidden">
+      <div class="modal">
+        <h2 class="modal-section-title">
+          Поиск гостиницы в Седоне
+        </h2>
+        <button class="modal-close-button">
+          <a href="0" class="visually-hidden">Закрыть</a>
+        </button>
+        <div class="modal-section-reservation">
+          <form class="reservation-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <label class="modal-section-reservation-text checkin-date" for="date-from">Дата заезда:</label>
+            <input class="form-field checkin" type="text" id="date-from" name="date-from" placeholder="Укажите дату"
+              value="27 апреля 2020" required>
+            <span class="modal-message-error">Мы не можем отправить вас в прошлое.</span>
+
+            <label class="modal-section-reservation-text checkout-date" for="date-to">Дата выезда:</label>
+            <input class="form-field checkout" type="text" id="date-to" name="date-to" placeholder="Укажите дату"
+              value="1 сентября 2023" required>
+            <span class="modal-message">На эти даты есть свободные номера. Пока есть.</span>
+
+
+            <label class="modal-section-reservation-text adults-label" for="adults">Взрослые:</label>
+            <div class="adults-form">
+              <button class="guest-change-button minus" type="button">
+                <span class="visually-hidden">Уменьшить количество гостей</span>
+              </button>
+                <input class="form-field adults" type="text" id="adults" name="adults" placeholder=" " required
+                  value="2">
+              <button class="button guest-change-button plus" type="button">
+                <span class="visually-hidden">Увеличить количество гостей</span>
+              </button>
+            </div>
+
+
+            <label class="modal-section-reservation-text kids-label" for="kids">Дети:</label>
+            <div class="kids-form">
+              <button class="button guest-change-button minus" type="button">
+                <span class="visually-hidden">Уменьшить количество детей</span>
+              </button>
+              <input class="form-field kids" type="text" id="kids" name="kids" placeholder=" " value="1">
+              <button class="button guest-change-button plus" type="button">
+                <span class="visually-hidden">Увеличить количество детей</span>
+              </button>
+
+              <span class="tooltip">
+                <button class="tooltip-button" type="button" aria-labelledby="tooltip-label-kids">
+
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-kids">Укажите количество детей, которые
+                  будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+              </span>
+            </div>
+            <a class="button modal-reservation-button" href="#">Найти</a>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 
